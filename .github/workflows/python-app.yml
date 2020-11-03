@@ -16,4 +16,4 @@ jobs:
       with:
         python-version: 3.8
     - name: Test C generation
-      run: cat opcodes-* | ./parse_opcodes -c
+      run: cat opcodes-* | ./parse_opcodes -c | cpp
