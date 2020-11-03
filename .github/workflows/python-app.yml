@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Test C generation
-      run:
-        cat opcodes-* | ./parse_opcodes -c > result.h
-        cat result.h  | cpp
+    - name: Generation C code
+      run: cat opcodes-* | ./parse_opcodes -c > result.h
+    - name: Check C output
+      run: cat result.h  | cpp
